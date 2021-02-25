@@ -1,0 +1,114 @@
+<view>
+  <!-- 轮播图区域 -->
+  <swiper class="banners" indicator-color="ivory" indicator-active-color="#d43c33" indicator-dots>
+    <swiper-item wx:for="{{banners}}" wx:key="encodeId">
+      <image src="{{item.pic}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 五个图标导航区域 -->
+  <view class="navContainer">
+    <view class="navItem">
+      <text class="iconfont icon-meirituijian-"></text>
+      <text>每日推荐</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-gedan"></text>
+      <text>歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-list"></text>
+      <text>排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai"></text>
+      <text>电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-MV"></text>
+      <text>直播</text>
+    </view>
+  </view>
+
+  <!-- 推荐歌曲 -->
+  <view class="recommandContainer">
+    <NavHeader title="推荐歌曲" nav="为你精心推荐"></NavHeader>
+    <!-- 内容区 -->
+    <scroll-view class="recommendScroll" enable-flex scroll-x enhanced show-scrollbar="false">
+      <view class="scrollItem" wx:for="{{recommandList}}" wx:key="id">
+        <image src="{{item.picUrl}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 排行榜 -->
+  <view class="topList">
+    <!-- 头部区域 -->
+    <NavHeader title="排行榜" nav="热歌风向标"></NavHeader>
+    <!-- 内容区域 -->
+    <swiper class="topListSwiper" next-margin="50rpx">
+      <swiper-item>
+        <view class="swiperItem">
+          <view class="title">云音乐热歌榜</view>
+          <view class="musicList">
+            <image src="/static/images/song/needle.png"></image>
+            <text class="count">1</text>
+            <text class="musicName">光辉岁月</text>
+          </view>
+          <view class="musicList">
+            <image src="/static/images/song/needle.png"></image>
+            <text class="count">2</text>
+            <text class="musicName">海阔天空</text>
+          </view>
+          <view class="musicList">
+            <image src="/static/images/song/needle.png"></image>
+            <text class="count">3</text>
+            <text class="musicName">不再犹豫</text>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="swiperItem">
+          <view class="title">云音乐热歌榜</view>
+          <view class="musicList">
+            <image src="/static/images/song/needle.png"></image>
+            <text class="count">1</text>
+            <text class="musicName">光辉岁月</text>
+          </view>
+          <view class="musicList">
+            <image src="/static/images/song/needle.png"></image>
+            <text class="count">2</text>
+            <text class="musicName">海阔天空</text>
+          </view>
+          <view class="musicList">
+            <image src="/static/images/song/needle.png"></image>
+            <text class="count">3</text>
+            <text class="musicName">不再犹豫</text>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="swiperItem">
+          <view class="title">云音乐热歌榜</view>
+          <view class="musicList">
+            <image src="/static/images/song/needle.png"></image>
+            <text class="count">1</text>
+            <text class="musicName">光辉岁月</text>
+          </view>
+          <view class="musicList">
+            <image src="/static/images/song/needle.png"></image>
+            <text class="count">2</text>
+            <text class="musicName">海阔天空</text>
+          </view>
+          <view class="musicList">
+            <image src="/static/images/song/needle.png"></image>
+            <text class="count">3</text>
+            <text class="musicName">不再犹豫</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+
+  </view>
+</view>

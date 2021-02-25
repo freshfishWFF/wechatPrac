@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "NavHeader":"/pages/component/NavHeader/NavHeader"
+  }
+}
