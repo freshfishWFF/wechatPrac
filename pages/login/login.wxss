@@ -1,0 +1,21 @@
+/* pages/login/login.wxss */
+.loginContainer{
+  padding: 100rpx;
+}
+.loginContainer .inputBox{
+  margin-bottom: 30rpx;
+}
+.loginContainer input{
+  font-size: 35rpx;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 30rpx;
+  border: 1px solid #d43c33;
+}
+.loginContainer button{
+  margin-top: 60rpx;
+  width: 100% !important;
+  background-color: #d43c33;
+  color: #fff;
+  border-radius: 40rpx;
+}

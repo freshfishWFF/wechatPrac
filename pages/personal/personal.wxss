@@ -1,1 +1,145 @@
 /* pages/personal/personal.wxss */
+.header{
+  height: 550rpx;
+  position: relative;
+}
+/* 背景图 */
+.header>image{
+  width: 100%;
+  height: 100%;
+  filter: opacity(0.6);
+}
+/* 展示头像信息 */
+.header .info{
+  position: absolute;
+  width: 100%;
+  height: 400rpx;
+  left: 0;
+  right: 0;
+  top: 100rpx;
+}
+.header .info>view{
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.avatarBox{
+  display: flex;
+}
+.avatarBox image{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 4rpx solid #fff;
+}
+.avatarBox text{
+  height: 140rpx;
+  line-height: 140rpx;
+  margin-left: 30rpx;
+}
+/* vip card 页面 */
+.header .card{
+  margin-top: 20rpx;
+  height: 240rpx;
+  border-radius: 15rpx;
+  background-color: rgba(0,0,0,0.7);
+  overflow: hidden;
+  position: relative;
+}
+.header .card>image{
+  height: 230rpx;
+  width: 400rpx;
+  position: absolute;
+  right: -20rpx;
+  top: 20rpx;
+  z-index: 1;
+}
+.header .card .cardInfo{
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 7;
+}
+.card .cardInfo>view{
+  padding: 20rpx;
+}
+.card .vipBtn{
+  display: flex;
+  justify-content: space-between;
+}
+.card .vipBtn text:first-child{
+  color: #F8E2B4;
+  font-size: 28rpx;
+}
+.card .vipBtn text:nth-child(2){
+  background-color: #F8E2B4;
+  font-size: 26rpx;
+  z-index: 9;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  color:#222;
+}
+
+/* 下方具体信息部分 */
+.section{
+  width: 100%;
+  height: 70%;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 111;
+  display: flex;
+  flex-direction: column;
+}
+.section>image{
+  width: 100%;
+  height: 30rpx;
+}
+.section>view{
+  flex: 1;
+  background-color: #f8f8f8;
+  padding: 30rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.section .funcBox{
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  border-radius: 20rpx;
+}
+
+.section .funcBox .funcItem{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10rpx;
+  font-size: 25rpx;
+  color: #444;
+}
+.funcBox .funcItem text+text{
+  margin-top: 15rpx;
+}
+.iconfont{
+  font-size: 50rpx;
+  color: #d43c33;
+}
+.section>view .menu{
+  margin-top: 30rpx;
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.section>view .menu>view{
+  flex: 1;
+  padding: 0 15rpx;
+  line-height: 100rpx;
+  color: #555;
+} 
+.section>view .menu>view+view{
+  border-top: 1rpx solid #ddd;
+}

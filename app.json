@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/personal/personal",
+    "pages/login/login",
     "pages/index/index",
     "pages/component/NavHeader/NavHeader",
-    "pages/video/video",
-    "pages/personal/personal"
+    "pages/video/video"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,10 +19,10 @@
     "selectedColor": "#2F85FC",
     "list": [
       {
-      "pagePath": "pages/index/index",
-      "text": "主页",
-      "iconPath": "/static/images/tabs/home.png",
-      "selectedIconPath": "/static/images/tabs/home-active.png"
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/static/images/tabs/home.png",
+        "selectedIconPath": "/static/images/tabs/home-active.png"
       },
       {
         "pagePath": "pages/video/video",

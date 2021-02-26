@@ -1,0 +1,11 @@
+<view class="loginContainer">
+  <view class="inputBox">
+    <text>用户名</text>
+    <input type="number" data-name="phone" bindinput="handleInput"/>
+  </view>
+  <view class="inputBox">
+    <text>密码</text>
+    <input type="text" password data-name="password"  bindinput="handleInput"/>
+  </view>
+  <button bindtap="doLogin">登录</button>
+</view>
