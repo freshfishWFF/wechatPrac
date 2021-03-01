@@ -1,4 +1,5 @@
 // pages/login/login.js
+import request from '../../utils/request'
 Page({
 
   /**
@@ -17,9 +18,22 @@ Page({
     });
   },
   // 登录
-  doLogin(){
+  async doLogin(){
     console.log(this.data.phone+"   "+ this.data.password);
     //进行输入
+    let {phone,password} = this.data;
+    let res = await request("/login/cellphone",{phone:phone,password:password},"POST");
+    console.log(res);
+    if(res.code == 200){
+      //说明登录成功
+      wx.setStorage({
+        data: JSON.stringify(res),
+        key: 'logInfo',
+      });
+      wx.navigateBack({
+        delta: 1,
+      })
+    }
   },
 
   /**

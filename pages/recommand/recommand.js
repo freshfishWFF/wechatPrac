@@ -1,4 +1,4 @@
-// pages/video/video.js
+// pages/recommand/recommand.js
 import request from '../../utils/request'
 Page({
 
@@ -6,27 +6,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navGroupList:[], //导航标签数据
-    navId:'', //点击的nav id
+    lycList:[]
   },
-  
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getNavGroupList()
-  },
-  //获取到导航数据
-  async getNavGroupList(){
-    let navList = await request('/video/group/list');
-    this.setData({
-      navGroupList: navList.data.slice(0,14)
-    })
-  },
-  changeNav(event){
-    let nId = event.currentTarget.id;
-    this.setData({
-      navId: nId
+    let _this = this;
+    //获取每日推荐
+    wx.getStorage({
+      key: 'logInfo',
+      async success(res){
+        var cookie = (JSON.parse(res.data)).cookie;
+        console.log(cookie);
+        let lycList = await request('/recommend/songs',{cookie:cookie});
+        console.log(lycList);
+        _this.setData({
+          lycList: lycList.data.dailySongs
+        })
+      }
     })
   },
 

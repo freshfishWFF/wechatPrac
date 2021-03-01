@@ -11,7 +11,11 @@ Page({
     recommandList:[],
     topList:[],//排行榜数据
   },
-
+  toRecommand(){
+    wx.navigateTo({
+      url: '../recommand/recommand',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -50,7 +54,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

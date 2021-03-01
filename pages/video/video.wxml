@@ -1,2 +1,21 @@
 <!--pages/video/video.wxml-->
-<text>pages/video/video.wxml</text>
+<view class="container">
+  <!-- 头部区域 -->
+  <view class="header">
+    <image src="/static/images/tabs/video-active.png"></image>
+    <view class="search">
+      搜索视频
+    </view>
+    <image src="/static/images/user/missing-face.png"></image>
+  </view>
+
+  <!-- 导航区域 -->
+  <scroll-view scroll-x enable-flex class="navScroll">
+    <view class="navItem" wx:for="{{navGroupList}}" wx:key="id">
+      <view class="navContent {{navId}}" bindtap="changeNav" id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+
+</view>

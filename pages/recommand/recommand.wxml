@@ -1,0 +1,14 @@
+<!--pages/recommand/recommand.wxml-->
+<wxs module="filter" src="../../utils/getArtist.wxs"></wxs>
+<view class="con">
+  <view class="item" wx:for="{{lycList}}" >
+    <image src="{{item.al.picUrl}}"></image>
+    <view class="namebox">
+      <text class="lycName">{{item.name}}</text>
+      <text class="artist">{{filter.getArtist(item.ar)}} - {{item.al.name}}</text>
+    </view>
+    <view class="more">
+      <text class="iconfont icon-more-vertical morebtn"></text>
+    </view>
+  </view>
+</view>

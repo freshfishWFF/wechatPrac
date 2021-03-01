@@ -1,0 +1,13 @@
+var filter ={
+  getArtist:function(arr){
+    var a = [];
+    for(var i = 0; i < arr.length; i++){
+      a.push(arr[i].name);
+    }
+    return a.join('/');
+  }
+}
+
+module.exports = {
+  getArtist: filter.getArtist
+}

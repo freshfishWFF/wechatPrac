@@ -1,0 +1,41 @@
+/* pages/recommand/recommand.wxss */
+.con{
+  padding: 0 40rpx;
+}
+.item {
+  display: flex;
+  margin-top: 20rpx;
+  align-items: center;
+}
+.item image{
+  width: 100rpx;
+  height: 100rpx;
+  box-shadow: 1px 1px 5px #d43c33;
+}
+.item .namebox{
+  margin-left: 20rpx;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.item .namebox text{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item .namebox .artist{
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* more */
+.item .more {
+  flex: 1;
+
+}
+.item .more .morebtn{
+  float: right;
+  color: #888;
+}

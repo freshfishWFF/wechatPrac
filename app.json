@@ -1,10 +1,12 @@
 {
   "pages": [
+    "pages/video/video",
     "pages/personal/personal",
-    "pages/login/login",
     "pages/index/index",
     "pages/component/NavHeader/NavHeader",
-    "pages/video/video"
+    
+    "pages/login/login",
+    "pages/recommand/recommand"
   ],
   "window": {
     "backgroundTextStyle": "light",

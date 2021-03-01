@@ -1,11 +1,33 @@
 <!--pages/personal/personal.wxml-->
+<wxs module="filter" src="../../utils/getArtist.wxs"></wxs>
 <view>
   <view class="header">
     <image src="../../static/images/user/bgImg2.jpg"></image>
-    <view class="info">
+    <view wx:if="{{profile}}" class="info">
       <view>
         <!-- 头像 -->
         <view class="avatarBox">
+          <image src="{{profile.avatarUrl}}"></image>
+          <text>{{profile.nickname}}</text>
+        </view>
+        <!-- vip card -->
+        <view class="card">
+          <image src="../../static/images/user/vip-card-bg.png"></image>
+          <view class="cardInfo">
+            <view>
+              <view class="vipBtn">
+                <text>阿呆会员</text>
+                <text>立即开通</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="info" >
+      <view>
+        <!-- 头像 -->
+        <view class="avatarBox"  bindtap="toLoginPage">
           <image src="../../static/images/user/missing-face.png"></image>
           <text>游客</text>
         </view>
@@ -46,8 +68,16 @@
         </view>
       </view>
 
+      <view class="recent">
+        <scroll-view class="recentScroll" enable-flex scroll-x>
+          <view class="scrollItem" wx:for="{{history}}" wx:for-item="lyc">
+            <image src="{{lyc.song.al.picUrl}}"></image>
+            <text>{{lyc.song.name}}</text>
+            <text>{{filter.getArtist(lyc.song.ar)}}</text>
+          </view>
+        </scroll-view>
+      </view>
       <view class="menu">
-        <view>最近播放</view>
         <view>我的音乐</view>
         <view>我的收藏</view>
         <view>我的电台</view>
